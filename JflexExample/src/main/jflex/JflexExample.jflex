@@ -1,9 +1,4 @@
-/**
-   This is a small example of a standalone text substitution scanner 
-   It reads a name after the keyword name and substitutes all occurences 
-   of "hello" with "hello <name>!". There is a sample input file 
-   "sample.inp" provided in this directory 
-*/
+
 
 package org.jflex.example;
 
