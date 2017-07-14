@@ -1,9 +1,4 @@
-/**
-   This is a small example of a standalone text substitution scanner 
-   It reads a name after the keyword name and substitutes all occurences 
-   of "hello" with "hello <name>!". There is a sample input file 
-   "sample.inp" provided in this directory 
-*/
+
 
 package org.jflex.example;
 
@@ -24,12 +19,12 @@ import java.util.*;
   String url = "https://graph.microsoft.com/v1.0/me";
   static String search;
   
-  public static void getUrl(String text) throws IOException {
+  public static String getUrl(String text) throws IOException {
 		JFlexExample tokenizer = new JFlexExample(new StringReader(text));
 		while(tokenizer.yylex() != JFlexExample.YYEOF){};
 		String url = "https://graph.microsoft.com/v1.0/me";
-		String finalUrl = url + "/" + service + "?$search=" + search;
-		System.out.println(finalUrl);
+		String finalUrl = url + "/" + service + "?$filter=" + filter;
+		return finalUrl;
   }
 %}
 

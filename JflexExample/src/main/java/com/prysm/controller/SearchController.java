@@ -16,8 +16,8 @@ public class SearchController {
 	public Result getResult(@RequestParam(value = "query") String query) throws IOException {
 		Result result = new Result();
 		result.setQuery(query);
-		JFlexExample.getUrl(query.toLowerCase());
-		result.setResponse("your query: " + query);
+		String url = JFlexExample.getUrl( (" " + query).toLowerCase());
+		result.setResponse(url);
 		return result;
 	}
 }
